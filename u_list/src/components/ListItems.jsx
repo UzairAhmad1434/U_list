@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 const ListItems = () => {
   return (
-    <div>
+    <div className="notes-list">
       {notes.map((note) => (
         <Link key={note.id} to={`/note/${note.id}`}>
-          <p>{note.body}</p>
+          <div className="notes-list-item">
+            <p>{note.body}</p>
+          </div>
         </Link>
       ))}
     </div>
