@@ -1,12 +1,8 @@
-import notes from "../assets/data.js";
+import ListItems from "../components/ListItems.jsx";
 const NotesListPages = () => {
   return (
     <div>
-      <div>
-        {notes.map((note) => (
-          <p key={note.id}>{note.body}</p>
-        ))}
-      </div>
+      <ListItems />
     </div>
   );
 };
