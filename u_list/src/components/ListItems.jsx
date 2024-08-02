@@ -1,16 +1,12 @@
-import notes from "../assets/data.js";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const ListItems = () => {
+const ListItems = ({ note }) => {
   return (
-    <div className="notes-list">
-      {notes.map((note) => (
-        <Link key={note.id} to={`/note/${note.id}`}>
-          <div className="notes-list-item">
-            <p>{note.body}</p>
-          </div>
-        </Link>
-      ))}
+    <div className="notes-list-item">
+      <Link to={`/note/${note.id}`}>
+        <p>{note.body}</p>
+      </Link>
     </div>
   );
 };
